@@ -2,6 +2,7 @@ import globals from "globals";
 import eslintJs from "@eslint/js";
 import eslintTs from "typescript-eslint";
 import eslintVue from "eslint-plugin-vue";
+import vueParser from "vue-eslint-parser";
 import eslintPrettier from "eslint-config-prettier";
 
 const nuxtGlobals = {
@@ -117,6 +118,7 @@ export default eslintTs.config(
     languageOptions: {
       ecmaVersion: `latest`,
       sourceType: `module`,
+      parser: vueParser,
       parserOptions: {
         parser: eslintTs.parser,
       },
@@ -132,6 +134,7 @@ export default eslintTs.config(
     },
     rules: {
       "no-empty-pattern": [`off`],
+      "no-useless-assignment": [`off`],
       "@typescript-eslint/no-unused-expressions": [`off`],
       "vue/no-mutating-props": [`off`],
       "vue/multi-word-component-names": [`off`],

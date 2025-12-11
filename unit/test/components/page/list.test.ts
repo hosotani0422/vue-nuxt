@@ -126,7 +126,7 @@ describe(`event`, () => {
     expect(dragInitMock).toBeCalledTimes(2);
     expect(dragInitMock).toBeCalledWith({ listId: `list0000000000000`, y: 2 });
     wrapper.findAll(`main li`)[0]!.trigger(`click`);
-    expect(routerBackMock).toBeCalledTimes(1);
+    expect(routerBackMock).toBeCalledTimes(2);
     expect(routerBackMock).toBeCalledWith({ listId: `list1111111111111` });
     wrapper.findAll(`main svg[aria-label='clone']`)[0]!.trigger(`click`);
     expect(copyItemMock).toBeCalledTimes(1);

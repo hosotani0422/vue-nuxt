@@ -23,7 +23,7 @@ jobs:
       - name: Setup Pnpm
         uses: pnpm/action-setup@v3
         with:
-          version: 10.20.0
+          version: 10.34.1
       - name: Install Dependency
         run: pnpm install
       - name: Build App
