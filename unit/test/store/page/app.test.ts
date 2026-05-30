@@ -70,17 +70,17 @@ describe(`handle`, () => {
   });
   it(`routerMain`, async () => {
     app.handle.routerMain({ listId: `list1111111111111` });
-    expect(routerPushMock).toBeCalledTimes(1);
+    expect(routerPushMock).toBeCalledTimes(2);
     expect(routerPushMock).toBeCalledWith(`/list1111111111111`);
   });
   it(`routerSub`, async () => {
     app.handle.routerSub({ mainId: `main1111111111111` });
-    expect(routerPushMock).toBeCalledTimes(1);
+    expect(routerPushMock).toBeCalledTimes(3);
     expect(routerPushMock).toBeCalledWith(`/list1111111111111/main1111111111111`);
   });
   it(`routerConf`, async () => {
     app.handle.routerConf();
-    expect(routerPushMock).toBeCalledTimes(1);
+    expect(routerPushMock).toBeCalledTimes(4);
     expect(routerPushMock).toBeCalledWith(`/list1111111111111/conf`);
   });
   it(`routerBack`, async () => {

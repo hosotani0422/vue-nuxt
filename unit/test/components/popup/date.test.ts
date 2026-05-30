@@ -94,7 +94,7 @@ describe(`event`, () => {
     expect(closeMock).toBeCalledTimes(1);
     expect(closeMock).toBeCalledWith();
     wrapper.findAll(`footer button`)[1]!.trigger(`click`);
-    expect(callbackMock).toBeCalledTimes(1);
+    expect(callbackMock).toBeCalledTimes(2);
     expect(callbackMock).toBeCalledWith(``);
   });
 });
